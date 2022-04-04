@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		5B24524827FA292900D80D1C /* CrazyAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B24524B27FA292900D80D1C /* CrazyAlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyAlarmApp.swift; sourceTree = "<group>"; };
-		5B24524D27FA292900D80D1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B24524D27FA292900D80D1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 0; };
 		5B24524F27FA292A00D80D1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B24525227FA292A00D80D1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5B24525827FA292A00D80D1C /* CrazyAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
