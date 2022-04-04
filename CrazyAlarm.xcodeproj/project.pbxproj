@@ -14,6 +14,7 @@
 		5B24525D27FA292A00D80D1C /* CrazyAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24525C27FA292A00D80D1C /* CrazyAlarmTests.swift */; };
 		5B24526727FA292A00D80D1C /* CrazyAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24526627FA292A00D80D1C /* CrazyAlarmUITests.swift */; };
 		5B24526927FA292A00D80D1C /* CrazyAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24526827FA292A00D80D1C /* CrazyAlarmUITestsLaunchTests.swift */; };
+		5BB96DEF27FA880B00AE63BA /* FlightTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB96DEE27FA880B00AE63BA /* FlightTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		5B24526227FA292A00D80D1C /* CrazyAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B24526627FA292A00D80D1C /* CrazyAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyAlarmUITests.swift; sourceTree = "<group>"; };
 		5B24526827FA292A00D80D1C /* CrazyAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5BB96DEE27FA880B00AE63BA /* FlightTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				5B24524B27FA292900D80D1C /* CrazyAlarmApp.swift */,
 				5B24524D27FA292900D80D1C /* ContentView.swift */,
+				5BB96DEE27FA880B00AE63BA /* FlightTime.swift */,
 				5B24524F27FA292A00D80D1C /* Assets.xcassets */,
 				5B24525127FA292A00D80D1C /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B24524E27FA292900D80D1C /* ContentView.swift in Sources */,
+				5BB96DEF27FA880B00AE63BA /* FlightTime.swift in Sources */,
 				5B24524C27FA292900D80D1C /* CrazyAlarmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
