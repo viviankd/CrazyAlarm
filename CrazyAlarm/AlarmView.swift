@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AlarmView: View {
-    @State private var Time = "00:00"
+    @State private var Time = "07:00"
     @State private var buttonisOn = false
     @State private var gamebuttonisOn = false
     @State private var musicuttonisOn = false
@@ -16,6 +16,7 @@ struct AlarmView: View {
     @State private var mountAlarm = 1
     
     var body: some View {
+
         NavigationView{
             ZStack{
                 Color.yellow
@@ -28,7 +29,7 @@ struct AlarmView: View {
                             HStack{
                                 VStack(alignment: .leading){
                                     Text(Time)
-                                        .font(.largeTitle)
+                                        .font(.system(size:40))
                                     Text("Alarm")
                                         .font(.system(size: 15))
                                 }
@@ -42,7 +43,7 @@ struct AlarmView: View {
                             Toggle("Crazy Musics", isOn: $musicuttonisOn).padding()
                             Toggle("Crazy Puzzles", isOn: $puzzlebuttonisOn).padding()
                         }
-                        .navigationTitle("👻CrazyAlarm")
+                        .navigationTitle("⏰ CrazyAlarm")
                     }.onAppear {
                         UITableView.appearance().backgroundColor = .clear
                     }
@@ -55,7 +56,7 @@ struct AlarmView: View {
                                 mountAlarm = mountAlarm + 1
                                 print("mount2 = \(mountAlarm)")
                             }) {
-                                Text("Edit").font(.system(size: 20).bold())
+                                Text(Image(systemName: "plus")).font(.system(size: 20).bold())
                             }
                         }
                         ToolbarItem(placement: .navigationBarLeading){
@@ -63,7 +64,7 @@ struct AlarmView: View {
                                 mountAlarm = mountAlarm + 1
                                 print("mount1 = \(mountAlarm)")
                             }) {
-                                Text(Image(systemName: "plus")).font(.system(size: 20).bold())
+                                Text("Edit").font(.system(size: 20).bold())
                             }
                         }
                     }

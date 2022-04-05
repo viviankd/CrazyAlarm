@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import Foundation
+import Combine
 
-struct Worldtime: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct CityTime: Identifiable {
+    
+    var id = String()
+    var city = String()
+    var time = Date()
+    
 }
 
-struct Worldtime_Previews: PreviewProvider {
-    static var previews: some View {
-        Worldtime()
-    }
+class CityTimeList : ObservableObject {
+    @Published var cities = [CityTime]()
 }
