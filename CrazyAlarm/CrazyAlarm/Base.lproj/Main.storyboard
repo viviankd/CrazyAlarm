@@ -40,16 +40,25 @@
                                 <rect key="frame" x="47" y="324" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="MATH SOLVER"/>
+                                <connections>
+                                    <segue destination="4h6-cg-nGO" kind="show" id="1Oy-yf-2ug"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-WF-fkL">
                                 <rect key="frame" x="47" y="363" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="WORDLE"/>
+                                <connections>
+                                    <segue destination="loA-Pj-VDm" kind="show" id="1eh-jg-kdk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Im-T6m">
                                 <rect key="frame" x="47" y="402" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="MING'S PUZZLE"/>
+                                <connections>
+                                    <segue destination="hrT-KG-d7X" kind="show" id="uMU-Gb-7WF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -84,20 +93,53 @@
             </objects>
             <point key="canvasLocation" x="717" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--Wordle View Controller-->
         <scene sceneID="QCy-za-Z5s">
             <objects>
-                <viewController id="loA-Pj-VDm" sceneMemberID="viewController">
+                <viewController id="loA-Pj-VDm" customClass="WordleViewController" customModule="CrazyAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qte-1i-baR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kJB-Wy-NxC"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e9N-f3-XCI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLX-IQ-gjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1403" y="84"/>
+        </scene>
+        <!--Mystery View Controller-->
+        <scene sceneID="VFZ-IH-sp0">
+            <objects>
+                <viewController id="hrT-KG-d7X" customClass="MysteryViewController" customModule="CrazyAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KwU-43-QaD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v5n-6c-Tl0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UC4-P0-wYh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDC-fG-wJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="755"/>
+        </scene>
+        <!--Memory View Controller-->
+        <scene sceneID="u8C-CJ-REN">
+            <objects>
+                <viewController id="4h6-cg-nGO" customClass="MemoryViewController" customModule="CrazyAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2IB-38-DPG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="22d-H1-Enb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4UD-rJ-YUH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLJ-UF-VDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j46-6W-gup">

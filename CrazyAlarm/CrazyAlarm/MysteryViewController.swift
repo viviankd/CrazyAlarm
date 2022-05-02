@@ -1,5 +1,5 @@
 //
-//  WordleViewController.swift
+//  MysteryViewController.swift
 //  CrazyAlarm
 //
 //  Created by Vivian Duong on 5/2/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class WordleViewController: UIViewController {
+class MysteryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Wordal"
+        title = "Minesweeper"
         // Do any additional setup after loading the view.
     }
     

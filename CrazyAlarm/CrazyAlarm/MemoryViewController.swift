@@ -1,5 +1,5 @@
 //
-//  WordleViewController.swift
+//  MemoryViewController.swift
 //  CrazyAlarm
 //
 //  Created by Vivian Duong on 5/2/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class WordleViewController: UIViewController {
+class MemoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Wordal"
+        title = "Memory Game"
         // Do any additional setup after loading the view.
     }
     
