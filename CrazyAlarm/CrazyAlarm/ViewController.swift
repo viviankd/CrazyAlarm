@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var setTime: UITextField!
     
     let datePicker = UIDatePicker()
-    
+    var stringDate = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 //        textField.inputView = datePicker
@@ -32,8 +32,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func createDatePicker() {
+      
         setTime.textAlignment = .center
-        
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.minimumDate = Date() // ensure the user cannot select a date in the future
         // toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit() // fit to width of screen
@@ -48,14 +50,18 @@ class ViewController: UIViewController {
         setTime.inputView = datePicker
         
         // show only time
-        datePicker.datePickerMode = .time
+//        datePicker.datePickerMode = .time
     }
     @objc func donePressed() {
         // formatter
         let formatter = DateFormatter()
-        formatter.dateStyle = .none
+        formatter.dateStyle = .medium
         formatter.timeStyle = .medium
-        setTime.text = formatter.string(from: datePicker.date)
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateStyle = DateFormatter.Style.short
+        formatter.timeStyle = DateFormatter.Style.short
+        stringDate = formatter.string(from: datePicker.date)
+        setTime.text = stringDate
         self.view.endEditing(true)
     }
 }
