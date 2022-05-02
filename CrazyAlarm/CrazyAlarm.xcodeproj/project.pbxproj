@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8908CC24281FBF5B00DFF425 /* WordleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC23281FBF5B00DFF425 /* WordleViewController.swift */; };
 		8948B10A27EE643F00345AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948B10927EE643F00345AAD /* AppDelegate.swift */; };
 		8948B10C27EE643F00345AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948B10B27EE643F00345AAD /* SceneDelegate.swift */; };
 		8948B10E27EE643F00345AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948B10D27EE643F00345AAD /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8908CC23281FBF5B00DFF425 /* WordleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleViewController.swift; sourceTree = "<group>"; };
 		8948B10627EE643F00345AAD /* CrazyAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8948B10927EE643F00345AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8948B10B27EE643F00345AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				8948B10927EE643F00345AAD /* AppDelegate.swift */,
+				8908CC23281FBF5B00DFF425 /* WordleViewController.swift */,
 				8948B10B27EE643F00345AAD /* SceneDelegate.swift */,
 				8948B10D27EE643F00345AAD /* ViewController.swift */,
 				8948B10F27EE643F00345AAD /* Main.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8948B10E27EE643F00345AAD /* ViewController.swift in Sources */,
+				8908CC24281FBF5B00DFF425 /* WordleViewController.swift in Sources */,
 				8948B10A27EE643F00345AAD /* AppDelegate.swift in Sources */,
 				8948B10C27EE643F00345AAD /* SceneDelegate.swift in Sources */,
 			);

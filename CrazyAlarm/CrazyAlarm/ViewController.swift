@@ -31,6 +31,39 @@ class ViewController: UIViewController {
         createDatePicker()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func makeAlarm() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {successful, e in
+            if successful {
+                print("setting alarm next")
+                self.setAlarm()
+            }
+        })
+    }
+    
+    func setAlarm() {
+        let notificationContent = UNMutableNotificationContent()
+        notificationContent.title = "ALARM!"
+        notificationContent.sound = .default
+        notificationContent.body = "Please complete your activity to deactiviate alarm"
+        
+        let alarmTime = Date().addingTimeInterval(7)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: alarmTime), repeats: false)
+        let userRequest = UNNotificationRequest(identifier: "id_goes_here", content: notificationContent, trigger: trigger)
+        UNUserNotificationCenter.current().add(userRequest, withCompletionHandler: { error in
+            if error != nil {
+                print("couldn't set alarm")
+            }
+            else {
+                print("alarm set!")
+            }
+        })
+    }
+    
+    func disarmAlarm() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    
     func createDatePicker() {
       
         setTime.textAlignment = .center

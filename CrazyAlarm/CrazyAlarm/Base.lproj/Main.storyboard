@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHY-sM-bfO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,34 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-sh-pzA">
-                                <rect key="frame" x="47" y="187" width="321" height="31"/>
+                                <rect key="frame" x="47" y="231" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Create New Alarm"/>
+                                <connections>
+                                    <action selector="makeAlarm" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3I-TK-sHT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-MM-1BP">
-                                <rect key="frame" x="47" y="226" width="46.5" height="34"/>
+                                <rect key="frame" x="47" y="270" width="46.5" height="34"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6C-hW-6LF">
+                                <rect key="frame" x="112.5" y="270" width="255.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKW-0c-k7G">
-                                <rect key="frame" x="47" y="296" width="321" height="31"/>
+                                <rect key="frame" x="47" y="324" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="MATH SOLVER"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-WF-fkL">
-                                <rect key="frame" x="47" y="335" width="321" height="31"/>
+                                <rect key="frame" x="47" y="363" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="WORDLE"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6C-hW-6LF">
-                                <rect key="frame" x="112.5" y="226" width="255.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Im-T6m">
-                                <rect key="frame" x="47" y="374" width="321" height="31"/>
+                                <rect key="frame" x="47" y="402" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="MING'S PUZZLE"/>
                             </button>
@@ -56,7 +59,6 @@
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="Y2z-WF-fkL" secondAttribute="trailing" id="5dO-LI-uTd"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="wKW-0c-k7G" secondAttribute="trailing" id="8s6-49-71A"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="MRb-Im-T6m" secondAttribute="leading" id="99K-4R-eiM"/>
-                            <constraint firstItem="Y2z-WF-fkL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="335" id="Egl-Eb-rDs"/>
                             <constraint firstItem="MRb-Im-T6m" firstAttribute="top" secondItem="Y2z-WF-fkL" secondAttribute="bottom" constant="8" symbolic="YES" id="FaX-7C-iKZ"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="Y2z-WF-fkL" secondAttribute="leading" id="Ned-sJ-qVt"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="wKW-0c-k7G" secondAttribute="leading" id="QmO-Q7-mvG"/>
@@ -67,16 +69,51 @@
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="l7w-Xh-PyT"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="MRb-Im-T6m" secondAttribute="trailing" id="nMU-gM-JjR"/>
                             <constraint firstItem="E6C-hW-6LF" firstAttribute="top" secondItem="Vf0-sh-pzA" secondAttribute="bottom" constant="8" symbolic="YES" id="rR3-be-k8i"/>
+                            <constraint firstItem="wKW-0c-k7G" firstAttribute="top" secondItem="PxM-MM-1BP" secondAttribute="bottom" constant="20" id="tww-DF-vvS"/>
                             <constraint firstItem="PxM-MM-1BP" firstAttribute="top" secondItem="Vf0-sh-pzA" secondAttribute="bottom" constant="8" symbolic="YES" id="vlg-lK-727"/>
                             <constraint firstItem="E6C-hW-6LF" firstAttribute="leading" secondItem="PxM-MM-1BP" secondAttribute="trailing" constant="19" id="wQQ-lu-Seq"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="PxM-MM-1BP" secondAttribute="leading" id="xFD-Xd-ap6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bTW-Yt-Q9Z"/>
                     <connections>
                         <outlet property="setTime" destination="E6C-hW-6LF" id="uQf-Mh-X2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QCy-za-Z5s">
+            <objects>
+                <viewController id="loA-Pj-VDm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qte-1i-baR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kJB-Wy-NxC"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLX-IQ-gjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j46-6W-gup">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SHY-sM-bfO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KQz-TB-Cwh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0s9-d0-x8I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKh-o3-8bn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
@@ -84,6 +121,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
