@@ -10,6 +10,9 @@
 		8908CC24281FBF5B00DFF425 /* WordleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC23281FBF5B00DFF425 /* WordleViewController.swift */; };
 		8908CC26281FC32F00DFF425 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC25281FC32E00DFF425 /* MemoryViewController.swift */; };
 		8908CC28281FC46A00DFF425 /* MysteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC27281FC46A00DFF425 /* MysteryViewController.swift */; };
+		8908CC2A281FD64D00DFF425 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC29281FD64D00DFF425 /* KeyboardViewController.swift */; };
+		8908CC2C281FD66B00DFF425 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC2B281FD66B00DFF425 /* GridViewController.swift */; };
+		8908CC2E281FE1D600DFF425 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908CC2D281FE1D600DFF425 /* KeyboardCell.swift */; };
 		8948B10A27EE643F00345AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948B10927EE643F00345AAD /* AppDelegate.swift */; };
 		8948B10C27EE643F00345AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948B10B27EE643F00345AAD /* SceneDelegate.swift */; };
 		8948B10E27EE643F00345AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948B10D27EE643F00345AAD /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 		8908CC23281FBF5B00DFF425 /* WordleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleViewController.swift; sourceTree = "<group>"; };
 		8908CC25281FC32E00DFF425 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		8908CC27281FC46A00DFF425 /* MysteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MysteryViewController.swift; sourceTree = "<group>"; };
+		8908CC29281FD64D00DFF425 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		8908CC2B281FD66B00DFF425 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		8908CC2D281FE1D600DFF425 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 		8948B10627EE643F00345AAD /* CrazyAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8948B10927EE643F00345AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8948B10B27EE643F00345AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 			children = (
 				8948B10927EE643F00345AAD /* AppDelegate.swift */,
 				8908CC23281FBF5B00DFF425 /* WordleViewController.swift */,
+				8908CC2B281FD66B00DFF425 /* GridViewController.swift */,
+				8908CC29281FD64D00DFF425 /* KeyboardViewController.swift */,
+				8908CC2D281FE1D600DFF425 /* KeyboardCell.swift */,
 				8948B10B27EE643F00345AAD /* SceneDelegate.swift */,
 				8948B10D27EE643F00345AAD /* ViewController.swift */,
 				8948B10F27EE643F00345AAD /* Main.storyboard */,
@@ -147,10 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8908CC2C281FD66B00DFF425 /* GridViewController.swift in Sources */,
 				8908CC28281FC46A00DFF425 /* MysteryViewController.swift in Sources */,
+				8908CC2E281FE1D600DFF425 /* KeyboardCell.swift in Sources */,
 				8948B10E27EE643F00345AAD /* ViewController.swift in Sources */,
 				8908CC24281FBF5B00DFF425 /* WordleViewController.swift in Sources */,
 				8948B10A27EE643F00345AAD /* AppDelegate.swift in Sources */,
+				8908CC2A281FD64D00DFF425 /* KeyboardViewController.swift in Sources */,
 				8948B10C27EE643F00345AAD /* SceneDelegate.swift in Sources */,
 				8908CC26281FC32F00DFF425 /* MemoryViewController.swift in Sources */,
 			);

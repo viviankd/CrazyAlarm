@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKW-0c-k7G">
                                 <rect key="frame" x="47" y="324" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="MATH SOLVER"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Memory Game"/>
                                 <connections>
                                     <segue destination="4h6-cg-nGO" kind="show" id="1Oy-yf-2ug"/>
                                 </connections>
@@ -47,7 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-WF-fkL">
                                 <rect key="frame" x="47" y="363" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="WORDLE"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Wordal"/>
                                 <connections>
                                     <segue destination="loA-Pj-VDm" kind="show" id="1eh-jg-kdk"/>
                                 </connections>
@@ -55,7 +55,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Im-T6m">
                                 <rect key="frame" x="47" y="402" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="MING'S PUZZLE"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Minesweeper"/>
                                 <connections>
                                     <segue destination="hrT-KG-d7X" kind="show" id="uMU-Gb-7WF"/>
                                 </connections>
