@@ -132,10 +132,82 @@
                     <view key="view" contentMode="scaleToFill" id="2IB-38-DPG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LM-56-oRb">
+                                <rect key="frame" x="20" y="198" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="b1Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="clV-LI-zbA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXX-Sq-St7">
+                                <rect key="frame" x="174" y="198" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="b2Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="w6c-y1-fD2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXe-VP-Pv3">
+                                <rect key="frame" x="327" y="198" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="b3Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="EKw-iu-0xE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTL-q8-6xc">
+                                <rect key="frame" x="20" y="352" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="b4Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="a9C-gC-bDx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aK-T8-2ea">
+                                <rect key="frame" x="174" y="352" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="b5Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="o3m-Hb-RPk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrx-Kz-gTJ">
+                                <rect key="frame" x="327" y="352" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="b6Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="U5j-2e-1ki"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="22d-H1-Enb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UTL-q8-6xc" firstAttribute="top" secondItem="5LM-56-oRb" secondAttribute="bottom" constant="123" id="9XP-wl-p8Q"/>
+                            <constraint firstItem="5aK-T8-2ea" firstAttribute="leading" secondItem="UTL-q8-6xc" secondAttribute="trailing" constant="87" id="Fxg-9R-Wus"/>
+                            <constraint firstItem="UTL-q8-6xc" firstAttribute="leading" secondItem="22d-H1-Enb" secondAttribute="leading" constant="20" id="Jxw-yy-elW"/>
+                            <constraint firstItem="qXX-Sq-St7" firstAttribute="top" secondItem="22d-H1-Enb" secondAttribute="top" constant="110" id="MWp-TZ-wJi"/>
+                            <constraint firstItem="NXe-VP-Pv3" firstAttribute="leading" secondItem="qXX-Sq-St7" secondAttribute="trailing" constant="86" id="NGc-W3-8J2"/>
+                            <constraint firstItem="Yrx-Kz-gTJ" firstAttribute="leading" secondItem="5aK-T8-2ea" secondAttribute="trailing" constant="86" id="cw6-4N-IjL"/>
+                            <constraint firstItem="5LM-56-oRb" firstAttribute="leading" secondItem="22d-H1-Enb" secondAttribute="leading" constant="20" id="drL-tf-fqg"/>
+                            <constraint firstItem="NXe-VP-Pv3" firstAttribute="top" secondItem="22d-H1-Enb" secondAttribute="top" constant="110" id="hp9-cf-gcy"/>
+                            <constraint firstItem="qXX-Sq-St7" firstAttribute="leading" secondItem="5LM-56-oRb" secondAttribute="trailing" constant="87" id="qep-kV-a54"/>
+                            <constraint firstItem="5LM-56-oRb" firstAttribute="top" secondItem="22d-H1-Enb" secondAttribute="top" constant="110" id="ued-Tx-aqw"/>
+                            <constraint firstItem="5aK-T8-2ea" firstAttribute="top" secondItem="qXX-Sq-St7" secondAttribute="bottom" constant="123" id="urV-uj-wuI"/>
+                            <constraint firstItem="Yrx-Kz-gTJ" firstAttribute="top" secondItem="NXe-VP-Pv3" secondAttribute="bottom" constant="123" id="zzJ-0F-r3x"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4UD-rJ-YUH"/>
+                    <connections>
+                        <outlet property="gameButton1" destination="5LM-56-oRb" id="AmO-iF-pck"/>
+                        <outlet property="gameButton2" destination="qXX-Sq-St7" id="vVv-Z5-THw"/>
+                        <outlet property="gameButton3" destination="NXe-VP-Pv3" id="B9j-j9-zW5"/>
+                        <outlet property="gameButton4" destination="UTL-q8-6xc" id="YxO-C9-Y5n"/>
+                        <outlet property="gameButton5" destination="5aK-T8-2ea" id="NHV-h8-sl4"/>
+                        <outlet property="gameButton6" destination="Yrx-Kz-gTJ" id="HhZ-Tl-yFM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLJ-UF-VDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
