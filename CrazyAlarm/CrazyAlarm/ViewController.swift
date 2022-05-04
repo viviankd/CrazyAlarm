@@ -58,6 +58,7 @@ class ViewController: UIViewController {
                 print("alarm set!")
             }
         })
+        disarmAlarm()
     }
     
     func disarmAlarm() {

@@ -2,7 +2,7 @@
 //  KeyboardCell.swift
 //  CrazyAlarm
 //
-//  Created by Vivian Duong on 5/2/22.
+//  Created by Vivian Duong on 4/4/22.
 //
 
 import UIKit
@@ -16,12 +16,13 @@ class KeyboardCell: UICollectionViewCell {
         label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 18, weight: .medium)
+//        label.font = UIFont.fontNames(forFamilyName: Arial)
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemGray2
+        backgroundColor = .systemPink
         contentView.addSubview(label)
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
