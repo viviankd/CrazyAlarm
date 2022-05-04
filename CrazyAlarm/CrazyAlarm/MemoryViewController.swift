@@ -15,10 +15,16 @@ class MemoryViewController: UIViewController {
     @IBOutlet weak var gameButton4: UIButton!
     @IBOutlet weak var gameButton5: UIButton!
     @IBOutlet weak var gameButton6: UIButton!
+    @IBOutlet weak var gameButton7: UIButton!
+    @IBOutlet weak var gameButton8: UIButton!
+    @IBOutlet weak var gameButton9: UIButton!
+    @IBOutlet weak var gameButton10: UIButton!
+    @IBOutlet weak var gameButton11: UIButton!
+    @IBOutlet weak var gameButton12: UIButton!
     
-    let colorSet = [UIColor.purple, UIColor.yellow, UIColor.orange]
-    var matchSet = [Int](repeating: -1, count: 6)
-    var correctSet = [Int](repeating: -1, count: 6)
+    let colorSet = [UIColor.purple, UIColor.yellow, UIColor.orange, UIColor.brown, UIColor.black, UIColor.magenta]
+    var matchSet = [Int](repeating: -1, count: 12)
+    var correctSet = [Int](repeating: -1, count: 12)
     var previousTap = -1
     var pregame = 1
     
@@ -30,7 +36,7 @@ class MemoryViewController: UIViewController {
     }
     
     func checkSet() -> Int {
-        for i in 0...5 {
+        for i in 0...11 {
             if(matchSet[i] == -1) {
                 return 0
             }
@@ -39,7 +45,7 @@ class MemoryViewController: UIViewController {
     }
     
     func checkWin() -> Int {
-        for i in 0...5 {
+        for i in 0...11 {
             if(correctSet[i] == -1) {
                 return 0
             }
@@ -97,6 +103,30 @@ class MemoryViewController: UIViewController {
     
     @IBAction func b6Tap() {
         checkMove(bNum: 5)
+    }
+    
+    @IBAction func b7Tap() {
+        checkMove(bNum: 6)
+    }
+    
+    @IBAction func b8Tap() {
+        checkMove(bNum: 7)
+    }
+    
+    @IBAction func b9Tap() {
+        checkMove(bNum: 8)
+    }
+
+    @IBAction func b10Tap() {
+        checkMove(bNum: 9)
+    }
+    
+    @IBAction func b11Tap() {
+        checkMove(bNum: 10)
+    }
+    
+    @IBAction func b12Tap() {
+        checkMove(bNum: 11)
     }
     
     func showWrong(bNum: Int) {
@@ -178,6 +208,84 @@ class MemoryViewController: UIViewController {
                 self.gameButton6.tintColor = UIColor.gray
             }
         }
+        if(bNum == 6) {
+            gameButton7.backgroundColor = UIColor.red
+            gameButton7.tintColor = UIColor.red
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if(self.correctSet[6] == 1) {
+                    self.gameButton7.backgroundColor = UIColor.green
+                    self.gameButton7.tintColor = UIColor.green
+                    return
+                }
+                self.gameButton7.backgroundColor = UIColor.gray
+                self.gameButton7.tintColor = UIColor.gray
+            }
+        }
+        if(bNum == 7) {
+            gameButton8.backgroundColor = UIColor.red
+            gameButton8.tintColor = UIColor.red
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if(self.correctSet[7] == 1) {
+                    self.gameButton8.backgroundColor = UIColor.green
+                    self.gameButton8.tintColor = UIColor.green
+                    return
+                }
+                self.gameButton8.backgroundColor = UIColor.gray
+                self.gameButton8.tintColor = UIColor.gray
+            }
+        }
+        if(bNum == 8) {
+            gameButton9.backgroundColor = UIColor.red
+            gameButton9.tintColor = UIColor.red
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if(self.correctSet[8] == 1) {
+                    self.gameButton9.backgroundColor = UIColor.green
+                    self.gameButton9.tintColor = UIColor.green
+                    return
+                }
+                self.gameButton9.backgroundColor = UIColor.gray
+                self.gameButton9.tintColor = UIColor.gray
+            }
+        }
+        if(bNum == 9) {
+            gameButton10.backgroundColor = UIColor.red
+            gameButton10.tintColor = UIColor.red
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if(self.correctSet[9] == 1) {
+                    self.gameButton10.backgroundColor = UIColor.green
+                    self.gameButton10.tintColor = UIColor.green
+                    return
+                }
+                self.gameButton10.backgroundColor = UIColor.gray
+                self.gameButton10.tintColor = UIColor.gray
+            }
+        }
+        if(bNum == 10) {
+            gameButton11.backgroundColor = UIColor.red
+            gameButton11.tintColor = UIColor.red
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if(self.correctSet[10] == 1) {
+                    self.gameButton11.backgroundColor = UIColor.green
+                    self.gameButton11.tintColor = UIColor.green
+                    return
+                }
+                self.gameButton11.backgroundColor = UIColor.gray
+                self.gameButton11.tintColor = UIColor.gray
+            }
+        }
+        if(bNum == 11) {
+            gameButton12.backgroundColor = UIColor.red
+            gameButton12.tintColor = UIColor.red
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if(self.correctSet[11] == 1) {
+                    self.gameButton12.backgroundColor = UIColor.green
+                    self.gameButton12.tintColor = UIColor.green
+                    return
+                }
+                self.gameButton12.backgroundColor = UIColor.gray
+                self.gameButton12.tintColor = UIColor.gray
+            }
+        }
     }
     
     func showCorrect(bNum: Int) {
@@ -205,6 +313,30 @@ class MemoryViewController: UIViewController {
             gameButton6.backgroundColor = UIColor.green
             gameButton6.tintColor = UIColor.green
         }
+        if(bNum == 6) {
+            gameButton7.backgroundColor = UIColor.green
+            gameButton7.tintColor = UIColor.green
+        }
+        if(bNum == 7) {
+            gameButton8.backgroundColor = UIColor.green
+            gameButton8.tintColor = UIColor.green
+        }
+        if(bNum == 8) {
+            gameButton9.backgroundColor = UIColor.green
+            gameButton9.tintColor = UIColor.green
+        }
+        if(bNum == 9) {
+            gameButton10.backgroundColor = UIColor.green
+            gameButton10.tintColor = UIColor.green
+        }
+        if(bNum == 10) {
+            gameButton11.backgroundColor = UIColor.green
+            gameButton11.tintColor = UIColor.green
+        }
+        if(bNum == 11) {
+            gameButton12.backgroundColor = UIColor.green
+            gameButton12.tintColor = UIColor.green
+        }
     }
     
     func hideColors() {
@@ -220,6 +352,19 @@ class MemoryViewController: UIViewController {
         gameButton5.tintColor = UIColor.gray
         gameButton6.backgroundColor = UIColor.gray
         gameButton6.tintColor = UIColor.gray
+        gameButton7.backgroundColor = UIColor.gray
+        gameButton7.tintColor = UIColor.gray
+        gameButton8.backgroundColor = UIColor.gray
+        gameButton8.tintColor = UIColor.gray
+        gameButton9.backgroundColor = UIColor.gray
+        gameButton9.tintColor = UIColor.gray
+        gameButton10.backgroundColor = UIColor.gray
+        gameButton10.tintColor = UIColor.gray
+        gameButton11.backgroundColor = UIColor.gray
+        gameButton11.tintColor = UIColor.gray
+        gameButton12.backgroundColor = UIColor.gray
+        gameButton12.tintColor = UIColor.gray
+        
     }
     
     func setColors() {
@@ -235,10 +380,22 @@ class MemoryViewController: UIViewController {
         gameButton5.tintColor = colorSet[matchSet[4]]
         gameButton6.backgroundColor = colorSet[matchSet[5]]
         gameButton6.tintColor = colorSet[matchSet[5]]
+        gameButton7.backgroundColor = colorSet[matchSet[6]]
+        gameButton7.tintColor = colorSet[matchSet[6]]
+        gameButton8.backgroundColor = colorSet[matchSet[7]]
+        gameButton8.tintColor = colorSet[matchSet[7]]
+        gameButton9.backgroundColor = colorSet[matchSet[8]]
+        gameButton9.tintColor = colorSet[matchSet[8]]
+        gameButton10.backgroundColor = colorSet[matchSet[9]]
+        gameButton10.tintColor = colorSet[matchSet[9]]
+        gameButton11.backgroundColor = colorSet[matchSet[10]]
+        gameButton11.tintColor = colorSet[matchSet[10]]
+        gameButton12.backgroundColor = colorSet[matchSet[11]]
+        gameButton12.tintColor = colorSet[matchSet[11]]
     }
     
     func newGame() {
-        for i in 0...5 {
+        for i in 0...11 {
             matchSet[i] = -1
             correctSet[i] = -1
         }
@@ -253,13 +410,13 @@ class MemoryViewController: UIViewController {
             b1 = -1
             b2 = -1
             while(b1 == -1) {
-                b1 = Int(arc4random_uniform(6))
+                b1 = Int(arc4random_uniform(12))
                 if(matchSet[b1] != -1) {
                     b1 = -1
                 }
             }
             while(b2 == -1) {
-                b2 = Int(arc4random_uniform(6))
+                b2 = Int(arc4random_uniform(12))
                 if(matchSet[b2] != -1 || b1 == b2) {
                     b2 = -1
                 }
@@ -276,6 +433,7 @@ class MemoryViewController: UIViewController {
         }
         //print(matchSet)
         //print(usedColors)
+        print("done building game")
         setColors()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.pregame = 0
