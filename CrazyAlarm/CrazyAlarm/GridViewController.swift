@@ -76,6 +76,7 @@ extension GridViewController {
         let win = datasource?.winCheck(at: indexPath)
         if win == true {
             // DO THE SPECIAL FUNCTION
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
             print("you win mate")
         
         }

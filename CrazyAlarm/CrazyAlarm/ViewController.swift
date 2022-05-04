@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
+    var dateTime = Date()
     
 //    private let datePicker: UIDatePicker = {
 ////        let picker = UIDatePicker()
@@ -41,27 +42,33 @@ class ViewController: UIViewController {
         })
     }
     
+    @IBAction func dateSet() {
+        dateTime = datePicker.date
+    }
+    
     func setAlarm() {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "ALARM!"
         notificationContent.sound = .default
         notificationContent.body = "Please complete your activity to deactiviate alarm"
-        
-        let alarmTime = Date().addingTimeInterval(7)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: alarmTime), repeats: false)
-        let userRequest = UNNotificationRequest(identifier: "id_goes_here", content: notificationContent, trigger: trigger)
-        UNUserNotificationCenter.current().add(userRequest, withCompletionHandler: { error in
-            if error != nil {
-                print("couldn't set alarm")
-            }
-            else {
-                print("alarm set!")
-            }
-        })
-        disarmAlarm()
+        for i in 0...60 {
+            let alarmTime = dateTime.addingTimeInterval(Double(i)*5)
+            print("alarm set for \(alarmTime)")
+            let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: alarmTime), repeats: false)
+            let userRequest = UNNotificationRequest(identifier: "alarm_number_\(i)", content: notificationContent, trigger: trigger)
+            UNUserNotificationCenter.current().add(userRequest, withCompletionHandler: { error in
+                if error != nil {
+                    print("couldn't set alarm")
+                }
+                else {
+                    print("alarm set!")
+                }
+            })
+        }
     }
     
     func disarmAlarm() {
+        print("removing all alarm notifications!")
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     

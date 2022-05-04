@@ -77,6 +77,7 @@ class MemoryViewController: UIViewController {
             }
         }
         if(checkWin() == 1) {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
             print("game over. you won!")
         }
     }
