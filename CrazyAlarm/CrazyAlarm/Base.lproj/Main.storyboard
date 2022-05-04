@@ -186,7 +186,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="b1Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="e30-9r-F82"/>
+                                    <action selector="b7Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="5AO-dz-CH7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs1-9O-MXZ" userLabel="Game Button8">
@@ -194,7 +194,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="b2Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="9bE-qV-ulb"/>
+                                    <action selector="b8Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="g4V-u8-PBj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv8-F0-etn" userLabel="Game Button9">
@@ -202,7 +202,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="b3Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="5L1-Nt-VnY"/>
+                                    <action selector="b9Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="Dlq-PX-i4U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVZ-bX-gvc" userLabel="Game Button10">
@@ -210,7 +210,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="b4Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="95J-bK-o0z"/>
+                                    <action selector="b10Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="t97-Lb-IAj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucv-ex-3BM" userLabel="Game Button11">
@@ -218,7 +218,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="b5Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="uhV-kO-1mZ"/>
+                                    <action selector="b11Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="6HA-pC-tQq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3t-hG-j1r" userLabel="Game Button12">
@@ -226,7 +226,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="b6Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="cE2-hb-tky"/>
+                                    <action selector="b12Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="VDH-jF-3XG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -264,11 +264,17 @@
                     <navigationItem key="navigationItem" id="4UD-rJ-YUH"/>
                     <connections>
                         <outlet property="gameButton1" destination="5LM-56-oRb" id="AmO-iF-pck"/>
+                        <outlet property="gameButton10" destination="KVZ-bX-gvc" id="gBi-pl-5zu"/>
+                        <outlet property="gameButton11" destination="ucv-ex-3BM" id="67N-p7-TUT"/>
+                        <outlet property="gameButton12" destination="j3t-hG-j1r" id="uBq-lw-0lc"/>
                         <outlet property="gameButton2" destination="qXX-Sq-St7" id="vVv-Z5-THw"/>
                         <outlet property="gameButton3" destination="NXe-VP-Pv3" id="B9j-j9-zW5"/>
                         <outlet property="gameButton4" destination="UTL-q8-6xc" id="YxO-C9-Y5n"/>
                         <outlet property="gameButton5" destination="5aK-T8-2ea" id="NHV-h8-sl4"/>
                         <outlet property="gameButton6" destination="Yrx-Kz-gTJ" id="HhZ-Tl-yFM"/>
+                        <outlet property="gameButton7" destination="inh-lM-hj4" id="duv-lD-v5A"/>
+                        <outlet property="gameButton8" destination="fs1-9O-MXZ" id="00S-Eb-d9J"/>
+                        <outlet property="gameButton9" destination="Kv8-F0-etn" id="J7Y-bJ-0KC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLJ-UF-VDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
