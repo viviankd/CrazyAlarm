@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+var winner = false
 class WordleViewController: UIViewController {
     
     let answerCollection = [ "fairy", "farts", "green", "ulcer", "lofty", "bloat"]
@@ -21,6 +21,7 @@ class WordleViewController: UIViewController {
     let keyboardViewController = KeyboardViewController()
     let gridViewController = GridViewController()
     override func viewDidLoad() {
+        winner = false
         super.viewDidLoad()
         title = "Wordal"
         answer = answerCollection.randomElement() ?? "gross"
@@ -63,6 +64,9 @@ extension WordleViewController: KeyboardViewControllerDelegate {
     func keyboardViewController(_ vc: KeyboardViewController, didTapKey letter: Character) {
 //        print("tapped letter " + String(letter))
         // update guesses in 2d array
+        if winner == true {
+            return
+        }
         var stop = false //
         for i in 0..<guesses.count {
             for j in 0..<guesses[i].count {
@@ -71,6 +75,7 @@ extension WordleViewController: KeyboardViewControllerDelegate {
                         if j > 0 {
                             guesses[i][j-1] = nil
 //                            print("i " + String(i) + "j " + String(j))
+                            
                         }
                         stop = true
                         break
@@ -78,6 +83,17 @@ extension WordleViewController: KeyboardViewControllerDelegate {
                         guesses[i][j] = letter
                         stop = true
                         break
+                    }
+                }
+                
+            }
+//            print("i " + String(i) + "j " + String(j))
+            
+            if guesses[5][4] != nil && winner == false {
+                print("LOSER")
+                for v in 0..<guesses.count {
+                    for n in 0..<guesses[i].count {
+                        guesses[v][n] = nil
                     }
                 }
             }
@@ -139,6 +155,7 @@ extension WordleViewController: GridViewControllerDatasource {
         print("wincount " + String(winCount))
         if winCount == 5 {
             print("WINNER")
+            winner = true
             return true
         } else {
             winCount = 0
