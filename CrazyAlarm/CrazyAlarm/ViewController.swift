@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var setTime: UITextField!
     @IBAction func memoryButton() {
         if Date() < dateTime {
-            print("POOOOOPER")
             return
         }
         memButton.isEnabled = true
@@ -25,20 +24,25 @@ class ViewController: UIViewController {
     let datePicker = UIDatePicker()
     var stringDate = ""
     override func viewDidLoad() {
-        
-        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: {
-            notifArray in
-                print("checking notif array")
-                /*if notifArray.count == 0 {
-                    self.alarmSet.text = "No Alarm Set!!!!! Set one NOW"
-                }*/
-            })
         super.viewDidLoad()
     
 //        textField.inputView = datePicker
         createDatePicker()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: {
+            notifArray in
+                print("checking notif array")
+                if notifArray.count == 0 {
+                    DispatchQueue.main.async(execute: {
+                        self.alarmSet.text = "Set an Alarm"
+                    })
+                }
+            })
+    }
+    
     @IBAction func deleteAlarm() {
         if Date() >= dateTime {
             return
