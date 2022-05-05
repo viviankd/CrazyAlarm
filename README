@@ -12,7 +12,13 @@ should also be noted that the alarm time takes into account the amount of second
 minute displayed is reached. For example, if you set an alarm at 8:33:25 for 8:38 then the alarm will go off at 8:38:25. Another note is that the alarm will not go off
 if the user is in the app when the time is reached as it is assumed that they are there to complete their game but will go off if they then leave the app again. 
 The purpose of our app is to make an alarm that requires you to actually pay attention when it goes off so that you can wake up or remember to do whatever the alarm was 
-reminding you to do.
+reminding you to do. The first of the two games included is a memory game where you are shown pairs of colors and then the colors are hidden. Then you must click
+each matching pair in sequential order (click the first orange button then the second orange button to complete that pair) and you must do this for all color pairs.
+Once all color pairs have been matched you will have won the game and the alarm will be deactivated. The other of the two games is a version of the popular game
+"Wordle" where you must correctly enter the 5 letter word. A keyboard is provided on screen for the user to type letters and attempt to guess the word. Boxes will
+turn green when the letter in them is in the target word and in the correct position. Boxes will turn yellow when the letter in them is in the target word but not in
+the correct position. Boxes will be gray if the letter in them is not in the target word. If the word is correctly guessed then you will have won the game and the
+alarm will be deactivated.
 
 Dependencies:
 No dependencies the app just must run on an iPhone emulator (through Xcode was how it was tested)
