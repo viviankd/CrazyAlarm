@@ -44,6 +44,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Memory Game"/>
                                 <connections>
+                                    <action selector="memoryButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iS-Un-ONd"/>
                                     <segue destination="4h6-cg-nGO" kind="show" id="1Oy-yf-2ug"/>
                                 </connections>
                             </button>
@@ -107,6 +108,7 @@
                     <connections>
                         <outlet property="alarmSet" destination="ZlP-3u-uXc" id="Z5b-bk-ekV"/>
                         <outlet property="label" destination="ZlP-3u-uXc" id="diB-y8-Wnn"/>
+                        <outlet property="memButton" destination="wKW-0c-k7G" id="YMj-HX-XlS"/>
                         <outlet property="setTime" destination="E6C-hW-6LF" id="uQf-Mh-X2C"/>
                     </connections>
                 </viewController>
