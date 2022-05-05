@@ -21,6 +21,7 @@ class MemoryViewController: UIViewController {
     @IBOutlet weak var gameButton10: UIButton!
     @IBOutlet weak var gameButton11: UIButton!
     @IBOutlet weak var gameButton12: UIButton!
+    @IBOutlet weak var memoryLabel: UILabel!
     
     let colorSet = [UIColor.purple, UIColor.yellow, UIColor.orange, UIColor.brown, UIColor.black, UIColor.magenta]
     var matchSet = [Int](repeating: -1, count: 12)
@@ -78,6 +79,7 @@ class MemoryViewController: UIViewController {
         }
         if(checkWin() == 1) {
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            memoryLabel.text = "ALARM DEACTIVATED"
             print("game over. you won!")
         }
     }
@@ -435,8 +437,10 @@ class MemoryViewController: UIViewController {
         //print(matchSet)
         //print(usedColors)
         print("done building game")
+        
         setColors()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.memoryLabel.text = "GO!"
             self.pregame = 0
             self.hideColors()
         }

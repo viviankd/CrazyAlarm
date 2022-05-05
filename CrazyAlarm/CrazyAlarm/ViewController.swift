@@ -12,28 +12,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
     var dateTime = Date()
-    
-//    private let datePicker: UIDatePicker = {
-////        let picker = UIDatePicker()
-////        picker.datePickerMode = .time
-////        return picker
-//        let datePicker = UIDatePicker()
-//        datePicker.datePickerMode = .time
-//        return datePicker
-//    }()
-    
+    @IBOutlet weak var alarmSet: UILabel!
+
     @IBOutlet weak var setTime: UITextField!
     
     let datePicker = UIDatePicker()
     var stringDate = ""
     override func viewDidLoad() {
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: {
+            notifArray in
+                print("checking notif array")
+                /*if notifArray.count == 0 {
+                    self.alarmSet.text = "No Alarm Set!!!!! Set one NOW"
+                }*/
+            })
         super.viewDidLoad()
 //        textField.inputView = datePicker
         createDatePicker()
         // Do any additional setup after loading the view.
     }
+    @IBAction func deleteAlarm() {
+        if Date() >= dateTime {
+            return
+        }
+        alarmSet.text = "Set an Alarm"
+        
+        self.disarmAlarm()
+    }
     
     @IBAction func makeAlarm() {
+        if stringDate == "" {
+            return
+        }
+        alarmSet.text = "Alarm set for \(stringDate)"
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {successful, e in
             if successful {
                 print("setting alarm next")
@@ -50,8 +61,8 @@ class ViewController: UIViewController {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "ALARM!"
         notificationContent.sound = .default
-        notificationContent.body = "Please complete your activity to deactiviate alarm"
-        for i in 0...60 {
+        notificationContent.body = "Win a game to turn off alarm"
+        for i in 0...61 {
             let alarmTime = dateTime.addingTimeInterval(Double(i)*5)
             print("alarm set for \(alarmTime)")
             let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: alarmTime), repeats: false)

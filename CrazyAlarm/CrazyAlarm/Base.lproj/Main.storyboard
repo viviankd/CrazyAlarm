@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Crazier Alarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrazyAlarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,15 +24,15 @@
                                     <action selector="makeAlarm" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3I-TK-sHT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-MM-1BP">
-                                <rect key="frame" x="47" y="270" width="46.5" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Time    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-MM-1BP">
+                                <rect key="frame" x="47" y="189" width="107.5" height="34"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6C-hW-6LF">
-                                <rect key="frame" x="112.5" y="270" width="255.5" height="34"/>
+                                <rect key="frame" x="166.5" y="189" width="201.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -55,12 +55,22 @@
                                     <segue destination="loA-Pj-VDm" kind="show" id="1eh-jg-kdk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-Im-T6m">
-                                <rect key="frame" x="47" y="402" width="321" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set an Alarm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-3u-uXc">
+                                <rect key="frame" x="47" y="270" width="321" height="46"/>
+                                <color key="backgroundColor" red="0.82669029719999998" green="0.72058334209999997" blue="0.9314518571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHt-5J-swV">
+                                <rect key="frame" x="47" y="483" width="321" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Minesweeper"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete Current Alarm">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hrT-KG-d7X" kind="show" id="uMU-Gb-7WF"/>
+                                    <action selector="deleteAlarm" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dp1-GS-Czj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,33 +78,41 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PxM-MM-1BP" firstAttribute="height" secondItem="E6C-hW-6LF" secondAttribute="height" id="0If-9C-zxW"/>
+                            <constraint firstItem="ZlP-3u-uXc" firstAttribute="centerX" secondItem="wKW-0c-k7G" secondAttribute="centerX" id="3fQ-WD-10U"/>
+                            <constraint firstItem="Vf0-sh-pzA" firstAttribute="top" secondItem="E6C-hW-6LF" secondAttribute="bottom" constant="8" symbolic="YES" id="5AD-H7-dPi"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="Y2z-WF-fkL" secondAttribute="trailing" id="5dO-LI-uTd"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="wKW-0c-k7G" secondAttribute="trailing" id="8s6-49-71A"/>
-                            <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="MRb-Im-T6m" secondAttribute="leading" id="99K-4R-eiM"/>
-                            <constraint firstItem="MRb-Im-T6m" firstAttribute="top" secondItem="Y2z-WF-fkL" secondAttribute="bottom" constant="8" symbolic="YES" id="FaX-7C-iKZ"/>
+                            <constraint firstItem="ZlP-3u-uXc" firstAttribute="leading" secondItem="wKW-0c-k7G" secondAttribute="leading" id="8z7-cx-hxj"/>
+                            <constraint firstItem="ZlP-3u-uXc" firstAttribute="trailing" secondItem="wKW-0c-k7G" secondAttribute="trailing" id="B7T-41-o6d"/>
+                            <constraint firstItem="jHt-5J-swV" firstAttribute="centerX" secondItem="Y2z-WF-fkL" secondAttribute="centerX" id="G01-Ze-Uqt"/>
+                            <constraint firstItem="jHt-5J-swV" firstAttribute="leading" secondItem="Y2z-WF-fkL" secondAttribute="leading" id="HZ2-5q-Uaf"/>
+                            <constraint firstItem="jHt-5J-swV" firstAttribute="top" secondItem="Y2z-WF-fkL" secondAttribute="bottom" constant="89" id="Lwp-6s-c62"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="Y2z-WF-fkL" secondAttribute="leading" id="Ned-sJ-qVt"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="wKW-0c-k7G" secondAttribute="leading" id="QmO-Q7-mvG"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="QrX-td-nXr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vf0-sh-pzA" secondAttribute="trailing" constant="46" id="QzQ-F1-Uer"/>
+                            <constraint firstItem="Y2z-WF-fkL" firstAttribute="trailing" secondItem="jHt-5J-swV" secondAttribute="trailing" id="VHb-lA-QfI"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="E6C-hW-6LF" secondAttribute="trailing" id="cba-sV-qfc"/>
                             <constraint firstItem="Y2z-WF-fkL" firstAttribute="top" secondItem="wKW-0c-k7G" secondAttribute="bottom" constant="8" symbolic="YES" id="gc7-IK-lqn"/>
+                            <constraint firstItem="Vf0-sh-pzA" firstAttribute="top" secondItem="PxM-MM-1BP" secondAttribute="bottom" constant="8" symbolic="YES" id="imQ-Fa-nxo"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="l7w-Xh-PyT"/>
-                            <constraint firstItem="Vf0-sh-pzA" firstAttribute="trailing" secondItem="MRb-Im-T6m" secondAttribute="trailing" id="nMU-gM-JjR"/>
-                            <constraint firstItem="E6C-hW-6LF" firstAttribute="top" secondItem="Vf0-sh-pzA" secondAttribute="bottom" constant="8" symbolic="YES" id="rR3-be-k8i"/>
-                            <constraint firstItem="wKW-0c-k7G" firstAttribute="top" secondItem="PxM-MM-1BP" secondAttribute="bottom" constant="20" id="tww-DF-vvS"/>
-                            <constraint firstItem="PxM-MM-1BP" firstAttribute="top" secondItem="Vf0-sh-pzA" secondAttribute="bottom" constant="8" symbolic="YES" id="vlg-lK-727"/>
-                            <constraint firstItem="E6C-hW-6LF" firstAttribute="leading" secondItem="PxM-MM-1BP" secondAttribute="trailing" constant="19" id="wQQ-lu-Seq"/>
+                            <constraint firstItem="E6C-hW-6LF" firstAttribute="leading" secondItem="PxM-MM-1BP" secondAttribute="trailing" constant="12" id="wQQ-lu-Seq"/>
                             <constraint firstItem="Vf0-sh-pzA" firstAttribute="leading" secondItem="PxM-MM-1BP" secondAttribute="leading" id="xFD-Xd-ap6"/>
+                            <constraint firstItem="wKW-0c-k7G" firstAttribute="top" secondItem="Vf0-sh-pzA" secondAttribute="bottom" constant="62" id="xIJ-UW-cay"/>
+                            <constraint firstItem="wKW-0c-k7G" firstAttribute="top" secondItem="ZlP-3u-uXc" secondAttribute="bottom" constant="8" symbolic="YES" id="yT5-Lk-zz3"/>
+                            <constraint firstItem="ZlP-3u-uXc" firstAttribute="top" secondItem="Vf0-sh-pzA" secondAttribute="bottom" constant="8" symbolic="YES" id="z4Y-te-M38"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bTW-Yt-Q9Z"/>
+                    <navigationItem key="navigationItem" title="Crazier Alarm" id="bTW-Yt-Q9Z"/>
                     <connections>
+                        <outlet property="alarmSet" destination="ZlP-3u-uXc" id="Z5b-bk-ekV"/>
+                        <outlet property="label" destination="ZlP-3u-uXc" id="diB-y8-Wnn"/>
                         <outlet property="setTime" destination="E6C-hW-6LF" id="uQf-Mh-X2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="84"/>
+            <point key="canvasLocation" x="714.49275362318849" y="83.705357142857139"/>
         </scene>
         <!--Wordle View Controller-->
         <scene sceneID="QCy-za-Z5s">
@@ -232,11 +250,18 @@
                                     <action selector="b12Tap" destination="4h6-cg-nGO" eventType="touchUpInside" id="VDH-jF-3XG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorize the color pairs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0V-za-M0W">
+                                <rect key="frame" x="29" y="132" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="22d-H1-Enb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.51993539625718244" blue="0.84840183870284802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ucv-ex-3BM" firstAttribute="leading" secondItem="KVZ-bX-gvc" secondAttribute="trailing" constant="8.5" id="0Rx-ZN-uNY"/>
+                            <constraint firstItem="T0V-za-M0W" firstAttribute="top" secondItem="22d-H1-Enb" secondAttribute="top" constant="44" id="1WE-4A-2Et"/>
                             <constraint firstItem="inh-lM-hj4" firstAttribute="top" secondItem="UTL-q8-6xc" secondAttribute="bottom" constant="8" symbolic="YES" id="25v-lg-3JI"/>
                             <constraint firstItem="NXe-VP-Pv3" firstAttribute="top" secondItem="22d-H1-Enb" secondAttribute="top" constant="110" id="4Qm-VU-W7t"/>
                             <constraint firstItem="j3t-hG-j1r" firstAttribute="top" secondItem="Kv8-F0-etn" secondAttribute="bottom" constant="8" symbolic="YES" id="6Bo-sh-qEQ"/>
@@ -247,6 +272,7 @@
                             <constraint firstItem="UTL-q8-6xc" firstAttribute="leading" secondItem="inh-lM-hj4" secondAttribute="leading" id="Isc-rY-RSp"/>
                             <constraint firstItem="Yrx-Kz-gTJ" firstAttribute="leading" secondItem="Kv8-F0-etn" secondAttribute="leading" id="Jn8-oc-2rR"/>
                             <constraint firstItem="5aK-T8-2ea" firstAttribute="centerX" secondItem="2IB-38-DPG" secondAttribute="centerX" id="KfG-c1-mHg"/>
+                            <constraint firstItem="22d-H1-Enb" firstAttribute="trailing" secondItem="T0V-za-M0W" secondAttribute="trailing" constant="20" id="LXa-VO-ldb"/>
                             <constraint firstItem="NXe-VP-Pv3" firstAttribute="leading" secondItem="Yrx-Kz-gTJ" secondAttribute="leading" id="UN9-HD-doU"/>
                             <constraint firstItem="NXe-VP-Pv3" firstAttribute="baseline" secondItem="qXX-Sq-St7" secondAttribute="baseline" id="UrE-jj-hR2"/>
                             <constraint firstItem="Yrx-Kz-gTJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5aK-T8-2ea" secondAttribute="trailing" constant="8" symbolic="YES" id="Vix-LF-dHC"/>
@@ -257,9 +283,11 @@
                             <constraint firstItem="fs1-9O-MXZ" firstAttribute="top" secondItem="5aK-T8-2ea" secondAttribute="bottom" constant="8" symbolic="YES" id="eaT-tk-zjw"/>
                             <constraint firstItem="5LM-56-oRb" firstAttribute="leading" secondItem="UTL-q8-6xc" secondAttribute="leading" id="hLI-A0-YT4"/>
                             <constraint firstItem="KVZ-bX-gvc" firstAttribute="top" secondItem="inh-lM-hj4" secondAttribute="bottom" constant="8" symbolic="YES" id="kbb-Yk-wfU"/>
+                            <constraint firstItem="qXX-Sq-St7" firstAttribute="top" secondItem="T0V-za-M0W" secondAttribute="bottom" constant="45" id="mlj-j2-P80"/>
                             <constraint firstItem="inh-lM-hj4" firstAttribute="leading" secondItem="KVZ-bX-gvc" secondAttribute="leading" id="mmP-DK-4Av"/>
                             <constraint firstItem="5aK-T8-2ea" firstAttribute="baseline" secondItem="UTL-q8-6xc" secondAttribute="baseline" id="qex-al-uU5"/>
                             <constraint firstItem="qXX-Sq-St7" firstAttribute="leading" secondItem="5LM-56-oRb" secondAttribute="trailing" constant="8" symbolic="YES" id="uai-JJ-TZX"/>
+                            <constraint firstItem="T0V-za-M0W" firstAttribute="leading" secondItem="22d-H1-Enb" secondAttribute="leading" constant="29" id="v90-fA-Jsw"/>
                             <constraint firstItem="ucv-ex-3BM" firstAttribute="top" secondItem="fs1-9O-MXZ" secondAttribute="bottom" constant="8" symbolic="YES" id="wwE-MY-DQj"/>
                             <constraint firstItem="j3t-hG-j1r" firstAttribute="leading" secondItem="ucv-ex-3BM" secondAttribute="trailing" constant="8" symbolic="YES" id="zVi-23-gsa"/>
                         </constraints>
@@ -278,6 +306,7 @@
                         <outlet property="gameButton7" destination="inh-lM-hj4" id="duv-lD-v5A"/>
                         <outlet property="gameButton8" destination="fs1-9O-MXZ" id="00S-Eb-d9J"/>
                         <outlet property="gameButton9" destination="Kv8-F0-etn" id="J7Y-bJ-0KC"/>
+                        <outlet property="memoryLabel" destination="T0V-za-M0W" id="6u9-fw-wpA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLJ-UF-VDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -312,6 +341,9 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,7 +10,7 @@ import UIKit
 var winner = false
 class WordleViewController: UIViewController {
     
-    let answerCollection = [ "fairy", "farts", "green", "ulcer", "lofty", "bloat"]
+    let answerCollection = [ "fairy", "farts", "green", "ulcer", "lofty", "bloat", "girth", "round", "house"]
     var answer = ""
     // array of guesses. stores 6 guesses of 5 characters. Starts will nil values
     var guesses: [[Character?]] = Array(
