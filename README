@@ -7,7 +7,7 @@ We were originally also working with Ming Xia but decided to split up as he want
 What the app is supposed to do:
 The app is an alarm app that allows you to set an alarm for a time you select. Once you have selected an alarm it will display on the main screen and you may remove the
 alarm with a button also included on the main screen. However, if the time you set the alarm for is reached then you must play one of the two games, Wordal or a memory
-game, to deactivate the alarm. If you do not then you will keep getting notifications asking you to play your game to deactivate the alarm for the next 5 minutes. It
+game, to deactivate the alarm. If you do not then you will keep getting notifications asking you to play your game to deactivate the alarm for the next 3 minutes. It
 should also be noted that the alarm time takes into account the amount of seconds after the minute when the time was set so it won't necessarily activate right when the
 minute displayed is reached. For example, if you set an alarm at 8:33:25 for 8:38 then the alarm will go off at 8:38:25. Another note is that the alarm will not go off
 if the user is in the app when the time is reached as it is assumed that they are there to complete their game but will go off if they then leave the app again. 
